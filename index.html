@@ -11,41 +11,10 @@
     <link rel="stylesheet" href="style.css" />
     <script>
 
-        const myFunction = () => {
-            console.log("123");
-
-            var hashcode = $("#hashaddressdp").val();
-
-            myContract.methods.loginPanel(hashcode).call().then(
-
-                function (returndata) {
-                    console.log("124");
-                    if (returndata[1] == 1) {
-                        uname = returndata[0];
-
-                        Cookies.set('hashcodecp', hashcode, { expires: 14 });
-                        Cookies.set('usernamecp', uname, { expires: 14 });
-                        console.log("098");
-                        const user = Cookies.get('hashcodecp');
-                        console.log(user);
-                        console.log("123");
-                        window.location.replace('dashboard.html');
-                    }
-                    else {
-                        alert("User Account Not Found");
-                    }
-
-                }
-            );
-
-
-
-        }
         $(document).ready(function () {
-            console.log("Hello1");
+
 
             $("#btn_action").click(function () {
-                console.log("hello");
 
                 //Cookies.set()
                 //alert("working");
@@ -58,7 +27,6 @@
                             uname = returndata[0];
                             Cookies.set('hashcodecp', hashcode, { expires: 14 });
                             Cookies.set('usernamecp', uname, { expires: 14 });
-                            console.log(Cookies.get('hashcode'));
                             window.location.replace('dashboard.html');
                         }
                         else {
@@ -81,8 +49,6 @@
 
                 myContract.methods.loginPanel(hashcode).call().then(
                     function (returndata) {
-                        console.log(returndata[0]);
-                        console.log(returndata[1]);
                         if (returndata[1] == 1) {
                             uname = returndata[0];
                             Cookies.set('hashcodecp', hashcode, { expires: 14 });
@@ -109,12 +75,15 @@
 </head>
 
 <body>
-    <h1>CarPooling - Login Panel</h1>
+    <h1>WELCOME<h1>
+            <h2>BLOCKCHAIN BASED COLLABORATIVE AUTONOMOUS RIDESHARE APPLICATION</h2>
+            <h3>Click on the button below to proceed</h3>
+            <div align="left">
+                <button><a type="button" href='newuser.html'>LOGIN / SIGN UP</a></button>
+            </div>
 
-    <div align="right"><a href='newuser.html'>New User?</a></div>
 
-
-    <fieldset>
+            <!-- <fieldset>
         <legend> User - Driver Panel</legend>
         <form id=form1>
 
@@ -125,7 +94,7 @@
             <br />
             <div>
                 <span class="title"></span>
-                <input type="button" onclick=myFunction() value="Log-in as Driver" />
+                <input type="button" id="btn_action" value="Log-in as Driver" />
             </div>
         </form>
     </fieldset>
@@ -144,7 +113,7 @@
                 <input type="button" id="btn_action2" value="Log-in as Passanger" />
             </div>
         </form>
-    </fieldset>
+    </fieldset> -->
 
 </body>
 

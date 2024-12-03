@@ -3,9 +3,17 @@ web3.eth.defaultAccount = web3.eth.accounts[0];
 
 var myContract = new web3.eth.Contract([
 	{
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "argRideKey",
+				"type": "uint256"
+			}
+		],
+		"name": "activateRide",
+		"outputs": [],
 		"stateMutability": "nonpayable",
-		"type": "constructor"
+		"type": "function"
 	},
 	{
 		"inputs": [
@@ -51,6 +59,19 @@ var myContract = new web3.eth.Contract([
 			}
 		],
 		"name": "AddRide",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "argRideKey",
+				"type": "uint256"
+			}
+		],
+		"name": "cancelRide",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -115,35 +136,16 @@ var myContract = new web3.eth.Contract([
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "rideno",
+				"name": "rbid",
 				"type": "uint256"
 			},
 			{
 				"internalType": "uint256",
-				"name": "nop",
+				"name": "action",
 				"type": "uint256"
 			}
 		],
-		"name": "RideNOPStatus",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "argRideKey",
-				"type": "uint256"
-			}
-		],
-		"name": "activateRide",
+		"name": "rideBookingStatusUpdate",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -152,14 +154,19 @@ var myContract = new web3.eth.Contract([
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "argRideKey",
+				"name": "rbid",
 				"type": "uint256"
 			}
 		],
-		"name": "cancelRide",
+		"name": "ridepaymentupdates",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
 	},
 	{
 		"inputs": [
@@ -642,31 +649,24 @@ var myContract = new web3.eth.Contract([
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "rbid",
+				"name": "rideno",
 				"type": "uint256"
 			},
 			{
 				"internalType": "uint256",
-				"name": "action",
+				"name": "nop",
 				"type": "uint256"
 			}
 		],
-		"name": "rideBookingStatusUpdate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
+		"name": "RideNOPStatus",
+		"outputs": [
 			{
-				"internalType": "uint256",
-				"name": "rbid",
-				"type": "uint256"
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
 			}
 		],
-		"name": "ridepaymentupdates",
-		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -844,5 +844,5 @@ var myContract = new web3.eth.Contract([
 		"stateMutability": "view",
 		"type": "function"
 	}
-], "0xBFaB6A50884cA1049049738b55E2570daAcB8cc1");
+], "0xa03CDfF8F4047AE16eeC66F9b95B87C15e946935");
 

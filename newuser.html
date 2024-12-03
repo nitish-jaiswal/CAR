@@ -21,13 +21,15 @@
                 var uemail = $("#useremail").val();
                 var ucontact = $("#usercontact").val();
 
-                console.log(uname);
 
-                myContract.methods.RegisterUserAccount(hashcode, uname, ucontact, uemail).send({ from: hashcode, gas: '3000000' });
-                console.log(uemail);
-                Cookies.set('hashcodecp', hashcode, { expires: 7 });
-                Cookies.set('usernamecp', uname, { expires: 7 });
-                console.log("new user2");
+
+                //const accounts = web3.eth.getAccounts();
+                myContract.methods.RegisterUserAccount(hashcode, uname, ucontact, uemail)
+                    .send({ from: hashcode, gas: '3000000' });
+
+
+                Cookies.set('hashcodecp', hashcode, { expires: 14 });
+                Cookies.set('usernamecp', uname, { expires: 14 });
 
 
 
@@ -46,7 +48,7 @@
 </head>
 
 <body>
-    <h1>CarPooling</h1>
+    <h1>CAR</h1>
     <hr />
     <div align="right">
         <a class="btn" href="index.html">Go Back</a>
@@ -73,7 +75,7 @@
         </div>
         <div>
             <span class="title"></span>
-            <input type="button" id="btn_action" value="Create Account" />
+            <input type="button" id="btn_action" value="LOGIN / SIGN UP" />
         </div>
 
     </form>
