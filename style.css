@@ -1,0 +1,230 @@
+.title {
+    width: 200px;
+    display: inline-block;
+}
+
+.highlight {
+    color: red !important;
+    background-color: lightyellow !important;
+}
+
+.btn,
+.btn_logout {
+    background-color: antiquewhite;
+    border: black solid 1px;
+    width: 150px;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn_logout {
+    background-color: black !important;
+    color: white;
+}
+
+/* gpt */
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input[type="text"],
+input[type="button"],
+a.btn,
+a.btn_logout {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Text Input */
+input[type="text"] {
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid #99b3ff;
+    color: #333;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+input[type="text"]:focus {
+    border-color: #99b3ff;
+    box-shadow: 0 0 5px rgba(124, 0, 255, 0.5);
+}
+
+/* Buttons */
+input[type="button"] {
+    background-color: #99b3ff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+input[type="button"]:hover {
+    background-color: #99b3ff;
+    transform: translateY(-2px);
+}
+
+/* Button Links */
+a.btn,
+a.btn_logout {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+a.btn {
+    background-color: #99b3ff;
+}
+
+a.btn_logout {
+    background-color: #99b3ff;
+}
+
+a.btn:hover,
+a.btn_logout:hover {
+    background-color: #99b3ff;
+    transform: translateY(-2px);
+}
+
+/* Lists */
+ol {
+    margin: 20px 0;
+    padding: 0 20px;
+    list-style: decimal;
+    font-size: 1rem;
+    color: #333;
+}
+
+ol li {
+    margin: 10px 0;
+}
+
+/* Titles */
+.title {
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="button"] {
+        width: 100%;
+    }
+
+    a.btn,
+    a.btn_logout {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional Enhancements */
+fieldset {
+    border: 2px solid #99b3ff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    box-shadow: 0 4px 8px rgba(124, 0, 255, 0.3);
+    border-color: #99b3ff;
+}
+
+
+/* gpt2 */
+/* Styling for h1 */
+h1 {
+    color: #a35c74;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Styling for hr */
+hr {
+    background-color: #a35c74;
+    height: 2px;
+    border: none;
+    margin: 10px 0;
+}
+
+/* Styling for div */
+div {
+    font-size: 1.2rem;
+    color: black;
+    /* Keeps "Welcome", "Account ID", and "Account Balance" black */
+    text-align: center;
+}
+
+/* Styling for span inside div */
+div span {
+    color: #a35c74;
+    font-weight: bold;
+}
+
+div li {
+    color: #a35c74;
+    font-weight: bold;
+}
+
+#balance {
+    color: black;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+
+button {
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: white;
+    /* Change button text color to white */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Styling for the anchor inside the button */
+button a {
+    text-decoration: none;
+    color: white;
+    /* Ensure the link text inside the button is also white */
+    font-weight: bold;
+}
