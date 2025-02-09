@@ -228,3 +228,27 @@ button a {
     /* Ensure the link text inside the button is also white */
     font-weight: bold;
 }
+
+.custom-link {
+    font-size: 22px;
+    /* Larger font size (18px) */
+    color: #007bff;
+    /* Set link color */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: 500;
+    /* Make text slightly bold */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+.custom-link:hover {
+    color: #0056b3;
+    /* Change color on hover */
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+.link {
+    font-size: 22px;
+}
